@@ -1,419 +1,505 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programs - TechBridge | TechBrifgr</title>
-    <meta
-      name="description"
-      content="Explore TechBridge's learning programs: Data Analytics and Web Development. Build practical skills for your career."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="programs.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-      <div class="nav_inner container">
-        <a href="index.html" class="nav_logo" aria-label="TechBridge Home">
-          <img
-            src="assets/techbridge-logo.png"
-            alt="TechBridge logo"
-            class="nav_logo-img"
-          />
-        </a>
-        <button
-          class="nav_toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="nav_links"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-    <div class="nav_links" role="menubar">
-      <button class="nav_close" aria-label="Close navigation menu">
-        <span></span>
-        <span></span>
-      </button>
-      <a href="index.html" class="nav_link" role="menuitem">Home</a>
-      <a href="programs.html" class="nav_link nav_link-active" role="menuitem">Programs</a>
-      <a href="index.html#internship" class="nav_link" role="menuitem">Internship</a>
-      <a href="index.html#community" class="nav_link" role="menuitem">Community</a>
-      <a href="index.html#contact" class="nav_link" role="menuitem">Contact</a>
-      <a
-        href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-        class="nav_cta btn btn-primary btn-sm"
-        role="menuitem"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Apply Now</a
-      >
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Programs - TechBridge | TechBrifgr</title>
+		<meta
+			name="description"
+			content="Explore TechBridge's learning programs: Data Analytics and Web Development. Build practical skills for your career."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="programs.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav" role="navigation" aria-label="Main navigation">
+			<div class="nav_inner container">
+				<a href="index.html" class="nav_logo" aria-label="TechBridge Home">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="nav_logo-img"
+					/>
+				</a>
+				<button
+					class="nav_toggle"
+					aria-label="Toggle navigation menu"
+					aria-expanded="false"
+					aria-controls="nav_links"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</nav>
+		<div class="nav_links" role="menubar">
+			<button class="nav_close" aria-label="Close navigation menu">
+				<span></span>
+				<span></span>
+			</button>
+			<a href="index.html" class="nav_link" role="menuitem">Home</a>
+			<a href="programs.html" class="nav_link nav_link-active" role="menuitem"
+				>Programs</a
+			>
+			<a href="index.html#internship" class="nav_link" role="menuitem"
+				>Internship</a
+			>
+			<a href="index.html#community" class="nav_link" role="menuitem"
+				>Community</a
+			>
+			<a href="#programs-contact" class="nav_link" role="menuitem">Contact</a>
+			<a
+				href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+				class="nav_cta btn btn-primary btn-sm"
+				role="menuitem"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Apply Now</a
+			>
+		</div>
 
-    <!-- Hero Section -->
-    <section class="section section-dark programs-hero bg-grid">
-      <div class="container programs-hero_inner">
-        <div class="programs-hero_content">
-          <p class="hero_eyebrow">TechBridge Programs</p>
-          <h1 class="hero_title">Learn Practical Skills for Your Career</h1>
-          <p class="hero_subtitle">
-            Two hands-on programs designed to prepare you for real-world opportunities.
-            Choose a path that aligns with your interests and career goals.
-          </p>
-          <div class="hero_actions">
-            <a href="#programs-overview" class="btn btn-primary btn-lg">Explore Programs</a>
-            <a href="index.html" class="btn btn-outline btn-lg">Back to Home</a>
-          </div>
-        </div>
-        <div class="programs-hero_shapes" aria-hidden="true">
-          <div class="programs-hero_shape programs-hero_shape-1"></div>
-          <div class="programs-hero_shape programs-hero_shape-2"></div>
-        </div>
-      </div>
-    </section>
+		<!-- Hero Section -->
+		<section class="section section-dark programs-hero bg-grid">
+			<div class="container programs-hero_inner">
+				<div class="programs-hero_content">
+					<p class="hero_eyebrow">TechBridge Programs</p>
+					<h1 class="hero_title">Learn Practical Skills for Your Career</h1>
+					<p class="hero_subtitle">
+						Two hands-on programs designed to prepare you for real-world
+						opportunities. Choose a path that aligns with your interests and
+						career goals.
+					</p>
+					<div class="hero_actions">
+						<a href="#programs-overview" class="btn btn-primary btn-lg"
+							>Explore Programs</a
+						>
+						<a href="index.html" class="btn btn-outline btn-lg">Back to Home</a>
+					</div>
+				</div>
+				<div class="programs-hero_shapes" aria-hidden="true">
+					<div class="programs-hero_shape programs-hero_shape-1"></div>
+					<div class="programs-hero_shape programs-hero_shape-2"></div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Programs Overview -->
-    <section id="programs-overview" class="section section-light">
-      <div class="container">
-        <div class="section_header">
-          <span class="section_kicker">01 &middot; Overview</span>
-          <h2 class="section_title">Our Learning Programs</h2>
-          <p class="section_subtitle">
-            TechBridge offers two career-focused programs built around practical, project-based
-            learning. Each program is designed to equip you with in-demand skills that employers
-            look for.
-          </p>
-        </div>
-      </div>
-    </section>
+		<!-- Programs Overview -->
+		<section id="programs-overview" class="section section-light">
+			<div class="container">
+				<div class="section_header">
+					<span class="section_kicker">01 &middot; Overview</span>
+					<h2 class="section_title">Our Learning Programs</h2>
+					<p class="section_subtitle">
+						TechBridge offers two career-focused programs built around
+						practical, project-based learning. Each program is designed to equip
+						you with in-demand skills that employers look for.
+					</p>
+				</div>
+			</div>
+		</section>
 
-    <!-- Program Cards -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="programs-grid">
-          <!-- Data Analytics Card -->
-          <div class="program-card" data-program="data-analytics">
-            <div class="program-card_header">
-              <div class="program-card_icon">
-                <img
-                  src="assets/icons/data-analytics.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="program-card_icon-img"
-                />
-              </div>
-              <h3 class="program-card_title">Data Analytics</h3>
-            </div>
-            <p class="program-card_description">
-              Learn to work with data and extract meaningful insights. This program introduces
-              you to practical data analysis skills that help businesses make informed decisions.
-            </p>
-            <div class="program-card_brief">
-              <div class="program-card_focus">
-                <span class="program-card_focus-label">Focus:</span>
-                <span class="program-card_focus-text">Working with data and extracting insights</span>
-              </div>
-            </div>
-            <button class="program-card_toggle" aria-expanded="false" aria-controls="data-analytics-details">
-              Learn More
-            </button>
-            <div class="program-card_expanded" id="data-analytics-details" aria-hidden="true">
-              <div class="program-card_details">
-                <h4 class="program-card_details-title">What You'll Learn</h4>
-                <p class="program-card_details-text">
-                  This program introduces learners to practical data analysis, covering essential
-                  techniques for working with real-world datasets. You'll develop skills that are
-                  directly applicable to data-focused roles.
-                </p>
-                <div class="program-card_skills">
-                  <span class="skill-tag">Spreadsheet Analysis</span>
-                  <span class="skill-tag">Data Cleaning</span>
-                  <span class="skill-tag">SQL</span>
-                  <span class="skill-tag">Data Visualization</span>
-                  <span class="skill-tag">Business-Focused Analysis</span>
-                </div>
-                <a
-                  href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-                  class="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply for Data Analytics
-                </a>
-              </div>
-            </div>
-          </div>
+		<!-- Program Cards -->
+		<section class="section section-alt">
+			<div class="container">
+				<div class="programs-grid">
+					<!-- Data Analytics Card -->
+					<div class="program-card" data-program="data-analytics">
+						<div class="program-card_header">
+							<div class="program-card_icon">
+								<img
+									src="assets/icons/data-analytics.svg"
+									alt=""
+									aria-hidden="true"
+									class="program-card_icon-img"
+								/>
+							</div>
+							<h3 class="program-card_title">Data Analytics</h3>
+						</div>
+						<p class="program-card_description">
+							Learn to work with data and extract meaningful insights. This
+							program introduces you to practical data analysis skills that help
+							businesses make informed decisions.
+						</p>
+						<div class="program-card_brief">
+							<div class="program-card_focus">
+								<span class="program-card_focus-label">Focus:</span>
+								<span class="program-card_focus-text"
+									>Working with data and extracting insights</span
+								>
+							</div>
+						</div>
+						<button
+							class="program-card_toggle"
+							aria-expanded="false"
+							aria-controls="data-analytics-details"
+						>
+							Learn More
+						</button>
+						<div
+							class="program-card_expanded"
+							id="data-analytics-details"
+							aria-hidden="true"
+						>
+							<div class="program-card_details">
+								<h4 class="program-card_details-title">What You'll Learn</h4>
+								<p class="program-card_details-text">
+									This program introduces learners to practical data analysis,
+									covering essential techniques for working with real-world
+									datasets. You'll develop skills that are directly applicable
+									to data-focused roles.
+								</p>
+								<div class="program-card_skills">
+									<span class="skill-tag">Spreadsheet Analysis</span>
+									<span class="skill-tag">Data Cleaning</span>
+									<span class="skill-tag">SQL</span>
+									<span class="skill-tag">Data Visualization</span>
+									<span class="skill-tag">Business-Focused Analysis</span>
+								</div>
+								<a
+									href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+									class="btn btn-primary"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Apply for Data Analytics
+								</a>
+							</div>
+						</div>
+					</div>
 
-          <!-- Web Development Card -->
-          <div class="program-card" data-program="web-development">
-            <div class="program-card_header">
-              <div class="program-card_icon">
-                <img
-                  src="assets/icons/web-development.svg"
-                  alt=""
-                  aria-hidden="true"
-                  class="program-card_icon-img"
-                />
-              </div>
-              <h3 class="program-card_title">Web Development</h3>
-            </div>
-            <p class="program-card_description">
-              Learn to design and build websites from scratch. This program covers the core
-              technologies and tools used by professional web developers.
-            </p>
-            <div class="program-card_brief">
-              <div class="program-card_focus">
-                <span class="program-card_focus-label">Focus:</span>
-                <span class="program-card_focus-text">Designing and building websites and web applications</span>
-              </div>
-            </div>
-            <button class="program-card_toggle" aria-expanded="false" aria-controls="web-development-details">
-              Learn More
-            </button>
-            <div class="program-card_expanded" id="web-development-details" aria-hidden="true">
-              <div class="program-card_details">
-                <h4 class="program-card_details-title">What You'll Learn</h4>
-                <p class="program-card_details-text">
-                  This program introduces learners to practical website development, covering the
-                  fundamental technologies and workflows used to create modern web applications.
-                  You'll build projects that demonstrate your skills.
-                </p>
-                <div class="program-card_skills">
-                  <span class="skill-tag">HTML</span>
-                  <span class="skill-tag">CSS</span>
-                  <span class="skill-tag">JavaScript</span>
-                  <span class="skill-tag">Git/GitHub</span>
-                  <span class="skill-tag">Building Web Projects</span>
-                </div>
-                <a
-                  href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-                  class="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply for Web Development
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+					<!-- Web Development Card -->
+					<div class="program-card" data-program="web-development">
+						<div class="program-card_header">
+							<div class="program-card_icon">
+								<img
+									src="assets/icons/web-development.svg"
+									alt=""
+									aria-hidden="true"
+									class="program-card_icon-img"
+								/>
+							</div>
+							<h3 class="program-card_title">Web Development</h3>
+						</div>
+						<p class="program-card_description">
+							Learn to design and build websites from scratch. This program
+							covers the core technologies and tools used by professional web
+							developers.
+						</p>
+						<div class="program-card_brief">
+							<div class="program-card_focus">
+								<span class="program-card_focus-label">Focus:</span>
+								<span class="program-card_focus-text"
+									>Designing and building websites and web applications</span
+								>
+							</div>
+						</div>
+						<button
+							class="program-card_toggle"
+							aria-expanded="false"
+							aria-controls="web-development-details"
+						>
+							Learn More
+						</button>
+						<div
+							class="program-card_expanded"
+							id="web-development-details"
+							aria-hidden="true"
+						>
+							<div class="program-card_details">
+								<h4 class="program-card_details-title">What You'll Learn</h4>
+								<p class="program-card_details-text">
+									This program introduces learners to practical website
+									development, covering the fundamental technologies and
+									workflows used to create modern web applications. You'll build
+									projects that demonstrate your skills.
+								</p>
+								<div class="program-card_skills">
+									<span class="skill-tag">HTML</span>
+									<span class="skill-tag">CSS</span>
+									<span class="skill-tag">JavaScript</span>
+									<span class="skill-tag">Git/GitHub</span>
+									<span class="skill-tag">Building Web Projects</span>
+								</div>
+								<a
+									href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+									class="btn btn-primary"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Apply for Web Development
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Program Comparison -->
-    <section class="section section-light">
-      <div class="container">
-        <div class="section_header">
-          <span class="section_kicker">02 &middot; Compare</span>
-          <h2 class="section_title">Which Program Is Right for You?</h2>
-          <p class="section_subtitle">
-            Both programs offer practical, hands-on learning. The best choice depends on your
-            interests and career goals.
-          </p>
-        </div>
-        <div class="programs-comparison">
-          <div class="programs-comparison_card programs-comparison_card-analytics">
-            <div class="programs-comparison_icon">
-              <img
-                src="assets/icons/data-analytics.svg"
-                alt=""
-                aria-hidden="true"
-                class="programs-comparison_icon-img"
-              />
-            </div>
-            <h3 class="programs-comparison_title">Data Analytics</h3>
-            <p class="programs-comparison_subtitle">Turn data into actionable insights</p>
-            <ul class="programs-comparison_list">
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Analyze and interpret complex datasets</span>
-              </li>
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Create visualizations that tell a story</span>
-              </li>
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Support business decisions with data</span>
-              </li>
-            </ul>
-          </div>
-          <div class="programs-comparison_divider" aria-hidden="true">
-            <span class="programs-comparison_vs">VS</span>
-          </div>
-          <div class="programs-comparison_card programs-comparison_card-dev">
-            <div class="programs-comparison_icon">
-              <img
-                src="assets/icons/web-development.svg"
-                alt=""
-                aria-hidden="true"
-                class="programs-comparison_icon-img"
-              />
-            </div>
-            <h3 class="programs-comparison_title">Web Development</h3>
-            <p class="programs-comparison_subtitle">Build websites and web applications</p>
-            <ul class="programs-comparison_list">
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Design and develop responsive websites</span>
-              </li>
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Master core web technologies</span>
-              </li>
-              <li class="programs-comparison_item">
-                <img src="assets/icons/checkmark.svg" alt="" aria-hidden="true" class="programs-comparison_check" />
-                <span>Build a portfolio of real projects</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Program Comparison -->
+		<section class="section section-light">
+			<div class="container">
+				<div class="section_header">
+					<span class="section_kicker">02 &middot; Compare</span>
+					<h2 class="section_title">Which Program Is Right for You?</h2>
+					<p class="section_subtitle">
+						Both programs offer practical, hands-on learning. The best choice
+						depends on your interests and career goals.
+					</p>
+				</div>
+				<div class="programs-comparison">
+					<div
+						class="programs-comparison_card programs-comparison_card-analytics"
+					>
+						<div class="programs-comparison_icon">
+							<img
+								src="assets/icons/data-analytics.svg"
+								alt=""
+								aria-hidden="true"
+								class="programs-comparison_icon-img"
+							/>
+						</div>
+						<h3 class="programs-comparison_title">Data Analytics</h3>
+						<p class="programs-comparison_subtitle">
+							Turn data into actionable insights
+						</p>
+						<ul class="programs-comparison_list">
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Analyze and interpret complex datasets</span>
+							</li>
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Create visualizations that tell a story</span>
+							</li>
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Support business decisions with data</span>
+							</li>
+						</ul>
+					</div>
+					<div class="programs-comparison_divider" aria-hidden="true">
+						<span class="programs-comparison_vs">VS</span>
+					</div>
+					<div class="programs-comparison_card programs-comparison_card-dev">
+						<div class="programs-comparison_icon">
+							<img
+								src="assets/icons/web-development.svg"
+								alt=""
+								aria-hidden="true"
+								class="programs-comparison_icon-img"
+							/>
+						</div>
+						<h3 class="programs-comparison_title">Web Development</h3>
+						<p class="programs-comparison_subtitle">
+							Build websites and web applications
+						</p>
+						<ul class="programs-comparison_list">
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Design and develop responsive websites</span>
+							</li>
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Master core web technologies</span>
+							</li>
+							<li class="programs-comparison_item">
+								<img
+									src="assets/icons/checkmark.svg"
+									alt=""
+									aria-hidden="true"
+									class="programs-comparison_check"
+								/>
+								<span>Build a portfolio of real projects</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Apply CTA -->
-    <section class="section section-dark bg-grid">
-      <div class="container">
-        <div class="apply-section">
-          <div class="apply-section_content">
-            <span class="section_kicker">03 &middot; Apply</span>
-            <h2 class="section_title section_title-light">Ready to Start Your Journey?</h2>
-            <p class="apply-section_text">
-              Apply for the TechBridge internship and gain hands-on experience in your chosen
-              program. Take the first step toward building real-world skills.
-            </p>
-            <a
-              href="index.html#internship"
-              class="btn btn-outline"
-            >
-              Learn About the Internship
-            </a>
-          </div>
-          <div class="apply-section_card">
-            <h3 class="apply-section_card-title">TechBridge Internship Application</h3>
-            <p class="apply-section_card-text">
-              Complete your application in just a few minutes. We review every submission and
-              will get back to you shortly.
-            </p>
-            <a
-              href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-              class="btn btn-primary btn-lg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apply Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Apply CTA -->
+		<section class="section section-dark bg-grid">
+			<div class="container">
+				<div class="apply-section">
+					<div class="apply-section_content">
+						<span class="section_kicker">03 &middot; Apply</span>
+						<h2 class="section_title section_title-light">
+							Ready to Start Your Journey?
+						</h2>
+						<p class="apply-section_text">
+							Apply for the TechBridge internship and gain hands-on experience
+							in your chosen program. Take the first step toward building
+							real-world skills.
+						</p>
+						<a href="index.html#internship" class="btn btn-outline">
+							Learn About the Internship
+						</a>
+					</div>
+					<div class="apply-section_card">
+						<h3 class="apply-section_card-title">
+							TechBridge Internship Application
+						</h3>
+						<p class="apply-section_card-text">
+							Complete your application in just a few minutes. We review every
+							submission and will get back to you shortly.
+						</p>
+						<a
+							href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+							class="btn btn-primary btn-lg"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Apply Now
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer_inner">
-        <div class="footer_brand">
-          <img
-            src="assets/techbridge-logo.png"
-            alt="TechBridge logo"
-            class="footer_logo"
-          />
-          <p class="footer_tagline">Bridging Learning to Real-World Experience</p>
-        </div>
-        <div class="footer_links-group">
-          <h4 class="footer_heading">Programs</h4>
-          <ul class="footer_links">
-            <li><a href="#data-analytics" class="footer_link">Data Analytics</a></li>
-            <li><a href="#web-development" class="footer_link">Web Development</a></li>
-            <li><a href="index.html#internship" class="footer_link">Internship</a></li>
-          </ul>
-        </div>
-        <div class="footer_links-group">
-          <h4 class="footer_heading">Connect</h4>
-          <ul class="footer_links">
-            <li>
-              <a
-                href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
-                class="footer_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >WhatsApp Community</a
-              >
-            </li>
-            <li>
-              <a href="mailto:techbridgebaslink@gmail.com" class="footer_link">Email Us</a>
-            </li>
-            <li>
-              <a
-                href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-                class="footer_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Apply Now</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer_bottom container">
-        <p class="footer_copy">&copy; 2026 TechBridge by Baselink Services Limited</p>
-      </div>
-    </footer>
+		<!-- Footer -->
+		<footer class="footer" id="programs-contact">
+			<div class="container footer_inner">
+				<div class="footer_brand">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="footer_logo"
+					/>
+					<p class="footer_tagline">
+						Bridging Learning to Real-World Experience
+					</p>
+				</div>
+				<div class="footer_links-group">
+					<h4 class="footer_heading">Programs</h4>
+					<ul class="footer_links">
+						<li>
+							<a href="#data-analytics" class="footer_link">Data Analytics</a>
+						</li>
+						<li>
+							<a href="#web-development" class="footer_link">Web Development</a>
+						</li>
+						<li>
+							<a href="index.html#internship" class="footer_link">Internship</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer_links-group">
+					<h4 class="footer_heading">Connect</h4>
+					<ul class="footer_links">
+						<li>
+							<a
+								href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
+								class="footer_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp Community</a
+							>
+						</li>
+						<li>
+							<a href="mailto:techbridgebaslink@gmail.com" class="footer_link"
+								>Email Us</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+								class="footer_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Apply Now</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_bottom container">
+				<p class="footer_copy">
+					&copy; 2026 TechBridge by Baselink Services Limited
+				</p>
+			</div>
+		</footer>
 
-    <script>
-      // Mobile navigation toggle
-      const toggle = document.querySelector(".nav_toggle");
-      const navLinks = document.querySelector(".nav_links");
-      const closeBtn = document.querySelector(".nav_close");
+		<script>
+			// Mobile navigation toggle
+			const toggle = document.querySelector(".nav_toggle");
+			const navLinks = document.querySelector(".nav_links");
+			const closeBtn = document.querySelector(".nav_close");
 
-      toggle.addEventListener("click", () => {
-        const expanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", !expanded);
-        navLinks.classList.toggle("nav_links-open");
-      });
+			toggle.addEventListener("click", () => {
+				const expanded = toggle.getAttribute("aria-expanded") === "true";
+				toggle.setAttribute("aria-expanded", !expanded);
+				navLinks.classList.toggle("nav_links-open");
+			});
 
-      closeBtn.addEventListener("click", () => {
-        toggle.setAttribute("aria-expanded", "false");
-        navLinks.classList.remove("nav_links-open");
-      });
+			closeBtn.addEventListener("click", () => {
+				toggle.setAttribute("aria-expanded", "false");
+				navLinks.classList.remove("nav_links-open");
+			});
 
-      // Close mobile menu when any nav link is clicked
-      document.querySelectorAll(".nav_link, .nav_cta").forEach((link) => {
-        link.addEventListener("click", () => {
-          toggle.setAttribute("aria-expanded", "false");
-          navLinks.classList.remove("nav_links-open");
-        });
-      });
+			// Close mobile menu when any nav link is clicked
+			document.querySelectorAll(".nav_link, .nav_cta").forEach((link) => {
+				link.addEventListener("click", () => {
+					toggle.setAttribute("aria-expanded", "false");
+					navLinks.classList.remove("nav_links-open");
+				});
+			});
 
-      // Program card expand/collapse
-      document.querySelectorAll(".program-card_toggle").forEach((button) => {
-        button.addEventListener("click", () => {
-          const card = button.closest(".program-card");
-          const expanded = button.getAttribute("aria-expanded") === "true";
-          const details = card.querySelector(".program-card_expanded");
+			// Program card expand/collapse
+			document.querySelectorAll(".program-card_toggle").forEach((button) => {
+				button.addEventListener("click", () => {
+					const card = button.closest(".program-card");
+					const expanded = button.getAttribute("aria-expanded") === "true";
+					const details = card.querySelector(".program-card_expanded");
 
-          button.setAttribute("aria-expanded", !expanded);
-          details.setAttribute("aria-hidden", expanded);
+					button.setAttribute("aria-expanded", !expanded);
+					details.setAttribute("aria-hidden", expanded);
 
-          if (!expanded) {
-            button.textContent = "Show Less";
-            card.classList.add("program-card-expanded");
-          } else {
-            button.textContent = "Learn More";
-            card.classList.remove("program-card-expanded");
-          }
-        });
-      });
-    </script>
-  </body>
+					if (!expanded) {
+						button.textContent = "Show Less";
+						card.classList.add("program-card-expanded");
+					} else {
+						button.textContent = "Learn More";
+						card.classList.remove("program-card-expanded");
+					}
+				});
+			});
+		</script>
+	</body>
 </html>

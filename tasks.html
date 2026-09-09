@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Internship Tasks - TechBridge | TechBrifgr</title>
+		<meta
+			name="description"
+			content="Explore the 8-task internship journey at TechBridge. A structured 30-day practical experience building web development skills from beginner to advanced."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="tasks.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav" role="navigation" aria-label="Main navigation">
+			<div class="nav_inner container">
+				<a href="index.html" class="nav_logo" aria-label="TechBridge Home">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="nav_logo-img"
+					/>
+				</a>
+				<button
+					class="nav_toggle"
+					aria-label="Toggle navigation menu"
+					aria-expanded="false"
+					aria-controls="nav_links"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</nav>
+		<div class="nav_links" role="menubar">
+			<button class="nav_close" aria-label="Close navigation menu">
+				<span></span>
+				<span></span>
+			</button>
+			<a href="index.html" class="nav_link" role="menuitem">Home</a>
+			<a href="programs.html" class="nav_link" role="menuitem">Programs</a>
+			<a
+				href="tasks.html"
+				class="nav_link nav_link-active"
+				role="menuitem"
+				>Internship Tasks</a
+			>
+			<a href="index.html#community" class="nav_link" role="menuitem"
+				>Community</a
+			>
+			<a href="index.html#contact" class="nav_link" role="menuitem">Contact</a>
+			<a
+				href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+				class="nav_cta btn btn-primary btn-sm"
+				role="menuitem"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Apply Now</a
+			>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="section section-dark tasks-hero bg-grid">
+			<div class="tasks-hero_inner">
+				<div class="tasks-hero_shapes">
+					<div class="tasks-hero_shape tasks-hero_shape-1"></div>
+					<div class="tasks-hero_shape tasks-hero_shape-2"></div>
+				</div>
+				<p class="tasks-hero_eyebrow">TechBridge Internship</p>
+				<h1 class="tasks-hero_title">Your 30-Day Internship Journey</h1>
+				<p class="tasks-hero_subtitle">
+					Eight structured tasks that take you from building your first webpage
+					to launching a complete web platform. Each task builds on the last.
+				</p>
+				<div class="tasks-hero_actions">
+					<a href="#timeline" class="btn btn-primary btn-lg">View All Tasks</a>
+					<a
+						href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+						class="btn btn-outline btn-lg"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Apply for Internship</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Journey Overview -->
+		<section class="section section-light journey-overview">
+			<div class="container">
+				<div class="journey-header">
+					<h2 class="section_title">The Internship at a Glance</h2>
+					<p class="section_subtitle">
+						A structured 30-day practical internship where you progressively
+						build web development skills through hands-on projects.
+					</p>
+				</div>
+				<div class="journey-steps">
+					<div class="journey-step">
+						<div class="journey-step_dot diff-beginner">1</div>
+						<span class="journey-step_day">Day 1</span>
+						<span class="journey-step_label">Homepage</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-beginner">2</div>
+						<span class="journey-step_day">Day 4</span>
+						<span class="journey-step_label">Programs</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-beginner-int">3</div>
+						<span class="journey-step_day">Day 8</span>
+						<span class="journey-step_label">Tasks Page</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-intermediate">4</div>
+						<span class="journey-step_day">Day 11</span>
+						<span class="journey-step_label">Task Tracker</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-intermediate">5</div>
+						<span class="journey-step_day">Day 15</span>
+						<span class="journey-step_label">Registration</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-intermediate-adv">6</div>
+						<span class="journey-step_day">Day 19</span>
+						<span class="journey-step_label">Submissions</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-advanced">7</div>
+						<span class="journey-step_day">Day 22</span>
+						<span class="journey-step_label">Dashboard</span>
+					</div>
+					<div class="journey-step">
+						<div class="journey-step_dot diff-advanced">8</div>
+						<span class="journey-step_day">Day 26</span>
+						<span class="journey-step_label">Full Platform</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Timeline Section -->
+		<section id="timeline" class="section section-alt timeline-section">
+			<div class="container">
+				<div class="journey-header">
+					<h2 class="section_title">The 8 Tasks</h2>
+					<p class="section_subtitle">
+						Each task is introduced on a specific day and builds on the skills
+						developed in previous tasks. The difficulty increases as you progress.
+					</p>
+				</div>
+				<div class="timeline">
+					<!-- Task 1 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-beginner">1</div>
+						</div>
+						<div class="timeline-card" data-difficulty="beginner">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 01</span>
+								<span class="timeline-card_badge diff-beginner">
+									<span class="timeline-card_badge-dot"></span>
+									Beginner
+								</span>
+							</div>
+							<h3 class="timeline-card_title">Build the TechBridge Homepage</h3>
+							<p class="timeline-card_day">Day 1</p>
+							<p class="timeline-card_desc">
+								Create the first version of the TechBridge website using HTML and
+								CSS. Establish the foundation that the rest of the internship
+								builds upon.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 2 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-beginner">2</div>
+						</div>
+						<div class="timeline-card" data-difficulty="beginner">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 02</span>
+								<span class="timeline-card_badge diff-beginner">
+									<span class="timeline-card_badge-dot"></span>
+									Beginner
+								</span>
+							</div>
+							<h3 class="timeline-card_title">Build the Programs Experience</h3>
+							<p class="timeline-card_day">Day 4</p>
+							<p class="timeline-card_desc">
+								Create a Programs experience that presents TechBridge's available
+								learning programs. Show visitors what they can learn and why it
+								matters.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 3 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-beginner-int">3</div>
+						</div>
+						<div class="timeline-card" data-difficulty="beginner-intermediate">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 03</span>
+								<span class="timeline-card_badge diff-beginner-int">
+									<span class="timeline-card_badge-dot"></span>
+									Beginner - Intermediate
+								</span>
+							</div>
+							<h3 class="timeline-card_title">
+								Build the Internship Tasks Experience
+							</h3>
+							<p class="timeline-card_day">Day 8</p>
+							<p class="timeline-card_desc">
+								Create an interface that presents the TechBridge internship tasks
+								and helps users understand the internship journey from start to
+								finish.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 4 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-intermediate">4</div>
+						</div>
+						<div class="timeline-card" data-difficulty="intermediate">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 04</span>
+								<span class="timeline-card_badge diff-intermediate">
+									<span class="timeline-card_badge-dot"></span>
+									Intermediate
+								</span>
+							</div>
+							<h3 class="timeline-card_title">Build an Interactive Task Tracker</h3>
+							<p class="timeline-card_day">Day 11</p>
+							<p class="timeline-card_desc">
+								Use JavaScript to make the internship task experience interactive
+								and allow progress to be tracked. Bring your pages to life with
+								dynamic behavior.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 5 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-intermediate">5</div>
+						</div>
+						<div class="timeline-card" data-difficulty="intermediate">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 05</span>
+								<span class="timeline-card_badge diff-intermediate">
+									<span class="timeline-card_badge-dot"></span>
+									Intermediate
+								</span>
+							</div>
+							<h3 class="timeline-card_title">
+								Build the Intern Registration Experience
+							</h3>
+							<p class="timeline-card_day">Day 15</p>
+							<p class="timeline-card_desc">
+								Create a professional registration and onboarding interface for
+								TechBridge interns. Design forms that are clear, accessible, and
+								welcoming.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 6 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-intermediate-adv">6</div>
+						</div>
+						<div class="timeline-card" data-difficulty="intermediate-advanced">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 06</span>
+								<span class="timeline-card_badge diff-intermediate-adv">
+									<span class="timeline-card_badge-dot"></span>
+									Intermediate - Advanced
+								</span>
+							</div>
+							<h3 class="timeline-card_title">Build the Task Submission System</h3>
+							<p class="timeline-card_day">Day 19</p>
+							<p class="timeline-card_desc">
+								Create an interface through which interns can prepare and submit
+								their task work. Build a workflow that handles file uploads and
+								submission status.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 7 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-advanced">7</div>
+						</div>
+						<div class="timeline-card" data-difficulty="advanced">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 07</span>
+								<span class="timeline-card_badge diff-advanced">
+									<span class="timeline-card_badge-dot"></span>
+									Advanced
+								</span>
+							</div>
+							<h3 class="timeline-card_title">Build the Intern Dashboard</h3>
+							<p class="timeline-card_day">Day 22</p>
+							<p class="timeline-card_desc">
+								Create a dashboard where an intern can view their profile,
+								progress, tasks, and submissions. Pull together everything into
+								one unified view.
+							</p>
+						</div>
+					</div>
+
+					<!-- Task 8 -->
+					<div class="timeline-item">
+						<div class="timeline-node">
+							<div class="timeline-node_dot diff-advanced">8</div>
+						</div>
+						<div class="timeline-card" data-difficulty="advanced">
+							<div class="timeline-card_header">
+								<span class="timeline-card_number">Task 08</span>
+								<span class="timeline-card_badge diff-advanced">
+									<span class="timeline-card_badge-dot"></span>
+									Advanced
+								</span>
+							</div>
+							<h3 class="timeline-card_title">
+								Build the Complete TechBridge Internship Platform
+							</h3>
+							<p class="timeline-card_day">Day 26</p>
+							<p class="timeline-card_desc">
+								Combine the different components created during the internship
+								into a complete TechBridge platform. This is your capstone project
+								that brings everything together.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Apply CTA -->
+		<section class="tasks-apply">
+			<div class="tasks-apply_inner">
+				<div class="tasks-apply_content">
+					<p class="section_kicker">Start Your Journey</p>
+					<h2 class="section_title section_title-light">Ready to Build?</h2>
+					<p class="tasks-apply_text">
+						Apply for the TechBridge internship and start working through these
+						tasks with guidance from experienced mentors. By Day 26, you will have
+						built a complete web platform.
+					</p>
+					<a href="index.html#internship" class="btn btn-outline"
+						>Learn About the Internship</a
+					>
+				</div>
+				<div class="tasks-apply_card">
+					<h3 class="tasks-apply_card-title">Apply for Internship</h3>
+					<p class="tasks-apply_card-text">
+						Join the next cohort of TechBridge interns and start building real
+						projects.
+					</p>
+					<a
+						href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+						class="btn btn-primary btn-lg"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Apply Now</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer" id="tasks-contact">
+			<div class="container footer_inner">
+				<div class="footer_brand">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="footer_logo"
+					/>
+					<p class="footer_tagline">
+						Bridging Learning to Real-World Experience
+					</p>
+				</div>
+				<div class="footer_links-group">
+					<h4 class="footer_heading">Navigate</h4>
+					<ul class="footer_links">
+						<li>
+							<a href="index.html" class="footer_link">Home</a>
+						</li>
+						<li>
+							<a href="programs.html" class="footer_link">Programs</a>
+						</li>
+						<li>
+							<a href="tasks.html" class="footer_link">Tasks</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer_links-group">
+					<h4 class="footer_heading">Connect</h4>
+					<ul class="footer_links">
+						<li>
+							<a
+								href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
+								class="footer_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp Community</a
+							>
+						</li>
+						<li>
+							<a href="mailto:techbridgebaslink@gmail.com" class="footer_link"
+								>Email Us</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+								class="footer_link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Apply Now</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_bottom container">
+				<p class="footer_copy">
+					&copy; 2026 TechBridge by Baselink Services Limited
+				</p>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile navigation toggle
+			const toggle = document.querySelector(".nav_toggle");
+			const navLinks = document.querySelector(".nav_links");
+			const closeBtn = document.querySelector(".nav_close");
+
+			toggle.addEventListener("click", () => {
+				const expanded = toggle.getAttribute("aria-expanded") === "true";
+				toggle.setAttribute("aria-expanded", !expanded);
+				navLinks.classList.toggle("nav_links-open");
+			});
+
+			closeBtn.addEventListener("click", () => {
+				toggle.setAttribute("aria-expanded", "false");
+				navLinks.classList.remove("nav_links-open");
+			});
+
+			// Close mobile menu when any nav link is clicked
+			document.querySelectorAll(".nav_link, .nav_cta").forEach((link) => {
+				link.addEventListener("click", () => {
+					toggle.setAttribute("aria-expanded", "false");
+					navLinks.classList.remove("nav_links-open");
+				});
+			});
+		</script>
+	</body>
+</html>

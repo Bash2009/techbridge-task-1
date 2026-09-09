@@ -13,74 +13,87 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="index.css" />
 		<title>TechBridge - Bridging Learning to Real-World Experience</title>
 	</head>
 	<body>
 		<!-- Navigation -->
-		<nav class="nav" id="nav">
+		<nav class="nav" role="navigation" aria-label="Main navigation">
 			<div class="nav_inner">
-				<a href="#" class="nav_logo">
+				<a href="index.html" class="nav_logo" aria-label="TechBridge Home">
 					<img
 						src="assets/techbridge-logo.png"
-						alt="TechBridge"
+						alt="TechBridge logo"
 						class="nav_logo-img"
 					/>
 				</a>
+				<div class="nav_links">
+					<a href="#about" class="nav_link" role="menuitem">About</a>
+					<a href="programs.html" class="nav_link" role="menuitem">Programs</a>
+					<a href="tasks.html" class="nav_link" role="menuitem">Internship Tasks</a>
+					<a href="#community" class="nav_link" role="menuitem">Community</a>
+					<a href="#contact" class="nav_link" role="menuitem">Contact</a>
+					<a href="#internship" class="nav_cta btn btn-primary btn-sm" role="menuitem">
+						Apply Now
+						<span class="btn_icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+						</span>
+					</a>
+				</div>
 				<button
 					class="nav_toggle"
-					aria-label="Toggle navigation"
+					aria-label="Toggle navigation menu"
 					aria-expanded="false"
+					aria-controls="nav_links"
 				>
 					<span></span><span></span><span></span>
 				</button>
 			</div>
 		</nav>
-		<div class="nav_links">
-			<button class="nav_close" aria-label="Close navigation menu">
-				<span></span>
-				<span></span>
-			</button>
-			<a href="#about" class="nav_link">About</a>
-			<a href="programs.html" class="nav_link">Programs</a>
-			<a href="tasks.html" class="nav_link">Internship Tasks</a>
-			<a href="#community" class="nav_link">Community</a>
-			<a href="#contact" class="nav_link">Contact</a>
-			<a href="#internship" class="nav_cta btn btn-primary btn-sm"
-				>Apply Now</a
-			>
-		</div>
 
 		<!-- Hero Section -->
-		<header class="hero" id="hero">
-			<div class="hero_inner">
-				<div class="hero_content">
-					<p class="hero_eyebrow">By Baselink Services Limited</p>
-					<h1 class="hero_title">Bridging Learning to Real-World Experience</h1>
-					<p class="hero_subtitle">
-						TechBridge equips aspiring professionals with practical skills in
-						Data Analytics and Web Development through hands-on programs and a
-						30-day internship.
-					</p>
-					<div class="hero_actions">
-						<a href="#internship" class="btn btn-primary"
-							>Apply for Internship</a
-						>
-						<a href="programs.html" class="btn btn-outline">Explore Programs</a>
-					</div>
+		<header class="section section-light" id="hero" style="padding-top: 0;">
+			<div style="min-height: 100dvh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+				<div class="hero-orbs">
+					<div class="hero-orb hero-orb-1"></div>
+					<div class="hero-orb hero-orb-2"></div>
+					<div class="hero-orb hero-orb-3"></div>
 				</div>
-				<div class="hero_visual" aria-hidden="true">
-					<div class="hero_shape"></div>
-					<div class="hero_shape hero_shape-sm"></div>
+				<div class="container" style="text-align: center; position: relative; z-index: 1; padding-block: 6rem;">
+					<div data-reveal>
+						<p class="section_eyebrow">By Baselink Services Limited</p>
+						<h1 class="section_title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); max-width: 720px; margin-inline: auto; margin-bottom: 1.25rem;">
+							Bridging Learning to Real-World Experience
+						</h1>
+						<p class="section_subtitle" style="margin-inline: auto; margin-bottom: 2.5rem; max-width: 520px;">
+							TechBridge equips aspiring professionals with practical skills in
+							Data Analytics and Web Development through hands-on programs and a
+							30-day internship.
+						</p>
+						<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+							<a href="#internship" class="btn btn-primary btn-lg">
+								Apply for Internship
+								<span class="btn_icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+								</span>
+							</a>
+							<a href="programs.html" class="btn btn-outline btn-lg">
+								Explore Programs
+								<span class="btn_icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+								</span>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
 
 		<!-- Introduction -->
-		<section class="section section-light" id="about">
+		<section class="section section-alt" id="about">
 			<div class="container">
-				<div class="about">
+				<div class="about" data-reveal>
+					<p class="section_eyebrow">About TechBridge</p>
 					<h2 class="section_title">What is TechBridge?</h2>
 					<p class="about_text">
 						TechBridge is an educational initiative by Baselink Services
@@ -94,44 +107,55 @@
 		</section>
 
 		<!-- Programs -->
-		<section class="section section-alt" id="programs">
+		<section class="section section-light" id="programs">
 			<div class="container">
-				<h2 class="section_title">Our Programs</h2>
-				<p class="section_subtitle">
-					Two career-focused programs designed to build real skills.
-				</p>
-				<div class="programs">
+				<div data-reveal>
+					<p class="section_eyebrow">Our Programs</p>
+					<h2 class="section_title">Two Paths, One Goal</h2>
+					<p class="section_subtitle">
+						Career-focused programs designed to build real, employable skills.
+					</p>
+				</div>
+				<div class="programs" data-reveal="stagger">
 					<a href="programs.html#data-analytics" class="program-card">
-						<div class="program-card_icon" aria-hidden="true">
-							<img
-								src="assets/icons/data-analytics.svg"
-								alt=""
-								width="40"
-								height="40"
-							/>
+						<div class="doppel-card">
+							<div class="doppel-card_inner">
+								<div class="program-card_icon" aria-hidden="true">
+									<img
+										src="assets/icons/data-analytics.svg"
+										alt=""
+										width="40"
+										height="40"
+									/>
+								</div>
+								<h3 class="program-card_title">Data Analytics</h3>
+								<p class="program-card_desc">
+									Learn to collect, clean, analyze, and visualize data. Master tools
+									like Excel, SQL, Python, and modern dashboards to turn raw data
+									into actionable insights.
+								</p>
+							</div>
 						</div>
-						<h3 class="program-card_title">Data Analytics</h3>
-						<p class="program-card_desc">
-							Learn to collect, clean, analyze, and visualize data. Master tools
-							like Excel, SQL, Python, and modern dashboards to turn raw data
-							into actionable insights.
-						</p>
 					</a>
 					<a href="programs.html#web-development" class="program-card">
-						<div class="program-card_icon" aria-hidden="true">
-							<img
-								src="assets/icons/web-development.svg"
-								alt=""
-								width="40"
-								height="40"
-							/>
+						<div class="doppel-card">
+							<div class="doppel-card_inner">
+								<div class="program-card_icon" aria-hidden="true" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.15); color: #3b82f6;">
+									<img
+										src="assets/icons/web-development.svg"
+										alt=""
+										width="40"
+										height="40"
+									/>
+								</div>
+								<h3 class="program-card_title">Web Development</h3>
+								<p class="program-card_desc">
+									Build modern, responsive websites and web applications. From HTML
+									and CSS to JavaScript and frameworks, develop the skills employers
+									actually look for.
+								</p>
+							</div>
 						</div>
-						<h3 class="program-card_title">Web Development</h3>
-						<p class="program-card_desc">
-							Build modern, responsive websites and web applications. From HTML
-							and CSS to JavaScript and frameworks, develop the skills employers
-							actually look for.
-						</p>
 					</a>
 				</div>
 			</div>
@@ -141,8 +165,9 @@
 		<section class="section section-dark" id="internship">
 			<div class="container">
 				<div class="apply">
-					<div class="apply_content">
-						<h2 class="section_title section_title-light">
+					<div data-reveal>
+						<p class="section_eyebrow">The Internship</p>
+						<h2 class="section_title">
 							30-Day Practical Internship
 						</h2>
 						<p class="apply_intro">
@@ -168,9 +193,7 @@
 									height="20"
 									class="apply_check"
 								/>
-								<span
-									>Receive a recommendation letter based on performance</span
-								>
+								<span>Receive a recommendation letter based on performance</span>
 							</li>
 							<li class="apply_item">
 								<img
@@ -194,19 +217,29 @@
 							</li>
 						</ul>
 					</div>
-					<div class="apply_cta">
-						<h3 class="apply_cta-title">Ready to Start?</h3>
-						<p class="apply_cta-text">
-							Apply now and take the first step toward real-world tech
-							experience.
-						</p>
-						<a
-							href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
-							class="btn btn-primary btn-lg"
-							target="_blank"
-							rel="noopener"
-							>Apply for Internship</a
-						>
+					<div data-reveal>
+						<div class="doppel-card">
+							<div class="doppel-card_inner" style="text-align: center; padding: 3rem 2rem;">
+								<h3 class="section_title" style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.75rem;">
+									Ready to Start?
+								</h3>
+								<p style="color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.65;">
+									Apply now and take the first step toward real-world tech
+									experience.
+								</p>
+								<a
+									href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+									class="btn btn-primary btn-lg"
+									target="_blank"
+									rel="noopener"
+								>
+									Apply for Internship
+									<span class="btn_icon">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+									</span>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -215,25 +248,24 @@
 		<!-- Community -->
 		<section class="section section-alt" id="community">
 			<div class="container">
-				<div class="community">
-					<div class="community_content">
-						<h2 class="section_title">Join Our Community</h2>
-						<p class="community_text">
-							Connect with fellow learners, share resources, and stay updated on
-							TechBridge programs and opportunities.
-						</p>
-					</div>
-					<div class="community_action">
-						<a
-							href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
-							class="btn btn-whatsapp"
-							target="_blank"
-							rel="noopener"
-						>
-							<i class="fab fa-whatsapp"></i>
-							Join WhatsApp Community
-						</a>
-					</div>
+				<div class="community" data-reveal>
+					<p class="section_eyebrow">Community</p>
+					<h2 class="section_title">Join Our Community</h2>
+					<p class="community_text">
+						Connect with fellow learners, share resources, and stay updated on
+						TechBridge programs and opportunities.
+					</p>
+					<a
+						href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
+						class="btn btn-whatsapp btn-lg"
+						target="_blank"
+						rel="noopener"
+					>
+						Join WhatsApp Community
+						<span class="btn_icon" style="background: rgba(255,255,255,0.2);">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+						</span>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -241,8 +273,9 @@
 		<!-- Contact -->
 		<section class="section section-light" id="contact">
 			<div class="container">
-				<div class="contact">
-					<h2 class="section_title">Get in Touch</h2>
+				<div class="contact" data-reveal>
+					<p class="section_eyebrow">Get in Touch</p>
+					<h2 class="section_title">Contact Us</h2>
 					<p class="contact_text">Have questions? Reach out to us directly.</p>
 					<a href="mailto:techbridgebaslink@gmail.com" class="contact_email"
 						>techbridgebaslink@gmail.com</a
@@ -265,7 +298,7 @@
 							Bridging Learning to Real-World Experience
 						</p>
 					</div>
-					<div class="footer_links">
+					<div>
 						<h4 class="footer_heading">Programs</h4>
 						<a href="programs.html#data-analytics" class="footer_link"
 							>Data Analytics</a
@@ -275,43 +308,65 @@
 						>
 						<a href="#internship" class="footer_link">Internship</a>
 					</div>
-					<div class="footer_links">
+					<div>
 						<h4 class="footer_heading">Connect</h4>
-						<a href="#community" class="footer_link">WhatsApp Community</a>
+						<a
+						href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
+						class="footer_link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>WhatsApp Community</a
+					>
 						<a href="mailto:techbridgebaslink@gmail.com" class="footer_link"
 							>Email Us</a
 						>
 						<a href="#internship" class="footer_link">Apply Now</a>
 					</div>
 				</div>
-				<div class="footer_bottom">
-					<p>
-						&copy; 2026 TechBridge by Baselink Services Limited. All rights
-						reserved.
+				<div class="footer_bottom container">
+					<p class="footer_copy">
+						&copy; 2026 TechBridge by Baselink Services Limited
 					</p>
 				</div>
 			</div>
 		</footer>
 
 		<script>
+			// Mobile navigation toggle
 			const toggle = document.querySelector(".nav_toggle");
 			const navLinks = document.querySelector(".nav_links");
-			const closeBtn = document.querySelector(".nav_close");
+
 			toggle.addEventListener("click", () => {
 				const expanded = toggle.getAttribute("aria-expanded") === "true";
 				toggle.setAttribute("aria-expanded", !expanded);
 				navLinks.classList.toggle("nav_links-open");
 			});
-			closeBtn.addEventListener("click", () => {
-				toggle.setAttribute("aria-expanded", "false");
-				navLinks.classList.remove("nav_links-open");
-			});
+
 			document.querySelectorAll(".nav_link, .nav_cta").forEach((link) => {
 				link.addEventListener("click", () => {
 					toggle.setAttribute("aria-expanded", "false");
 					navLinks.classList.remove("nav_links-open");
 				});
 			});
+
+			// Scroll reveal
+			const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+			if (!prefersReducedMotion) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+								observer.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+				);
+				document.querySelectorAll("[data-reveal]").forEach((el) => observer.observe(el));
+			} else {
+				document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("revealed"));
+			}
 		</script>
 	</body>
 </html>

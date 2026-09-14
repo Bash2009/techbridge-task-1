@@ -6,8 +6,9 @@
 		<title>Internship Tasks - TechBridge | TechBrifgr</title>
 		<meta
 			name="description"
-			content="Explore TechBridge's 30-day internship: 8 progressive tasks designed to build real-world web development skills."
+			content="Explore TechBridge's 30-day internship roadmap. Switch between Data Analytics and Web Development tracks to see the 8 progressive tasks for each path."
 		/>
+		<link rel="icon" href="assets/techbridge-logo.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -31,8 +32,12 @@
 				<div class="nav_links">
 					<a href="index.html" class="nav_link" role="menuitem">Home</a>
 					<a href="programs.html" class="nav_link" role="menuitem">Programs</a>
-					<a href="tasks.html" class="nav_link nav_link-active" role="menuitem">Internship Tasks</a>
-					<a href="index.html#community" class="nav_link" role="menuitem">Community</a>
+					<a href="tasks.html" class="nav_link nav_link-active" role="menuitem"
+						>Internship Tasks</a
+					>
+					<a href="index.html#community" class="nav_link" role="menuitem"
+						>Community</a
+					>
 					<a href="#tasks-contact" class="nav_link" role="menuitem">Contact</a>
 					<a
 						href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
@@ -43,7 +48,17 @@
 					>
 						Apply Now
 						<span class="btn_icon">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+							<svg
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M7 17L17 7" />
+								<path d="M7 7h10v10" />
+							</svg>
 						</span>
 					</a>
 				</div>
@@ -68,27 +83,59 @@
 				<div class="hero-orb hero-orb-3"></div>
 			</div>
 			<div class="tasks-hero_inner">
-				<div class="section_header" data-reveal style="max-width: none;">
+				<div class="section_header" data-reveal style="max-width: none">
 					<p class="section_eyebrow">Internship Tasks</p>
-					<h1 class="section_title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+					<h1
+						class="section_title"
+						style="font-size: clamp(2.5rem, 6vw, 4.5rem)"
+					>
 						30 Days of Practical, Project-Based Learning
 					</h1>
-					<p class="section_subtitle" style="margin-inline: auto;">
+					<p class="section_subtitle" style="margin-inline: auto">
 						Complete eight progressive tasks over a 30-day internship. Each
 						project builds on the last, helping you develop real skills and a
 						portfolio of work.
 					</p>
-					<div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem;">
+					<div
+						class="hero-actions"
+						style="
+							display: flex;
+							flex-wrap: wrap;
+							gap: 0.75rem;
+							justify-content: center;
+							margin-top: 2rem;
+						"
+					>
 						<a href="#journey-overview" class="btn btn-primary btn-lg">
 							See the Journey
 							<span class="btn_icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M7 17L17 7" />
+									<path d="M7 7h10v10" />
+								</svg>
 							</span>
 						</a>
 						<a href="programs.html" class="btn btn-outline btn-lg">
 							Our Programs
 							<span class="btn_icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M7 17L17 7" />
+									<path d="M7 7h10v10" />
+								</svg>
 							</span>
 						</a>
 					</div>
@@ -107,259 +154,48 @@
 						designed to give you real-world experience in just 30 days.
 					</p>
 				</div>
+				<div class="track-selector" data-reveal>
+					<p class="track-selector_label">Choose Your Track</p>
+					<div class="track-selector_buttons">
+						<button
+							class="track-btn"
+							data-track="data-analytics"
+							aria-pressed="false"
+						>
+							<img
+								src="assets/icons/data-analytics.svg"
+								alt=""
+								aria-hidden="true"
+								class="track-btn_icon"
+							/>
+							Data Analytics
+						</button>
+						<button
+							class="track-btn active"
+							data-track="web-development"
+							aria-pressed="true"
+						>
+							<img
+								src="assets/icons/web-development.svg"
+								alt=""
+								aria-hidden="true"
+								class="track-btn_icon"
+							/>
+							Web Development
+						</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<!-- Task Roadmap -->
 		<section class="section section-light">
 			<div class="container">
-				<div class="roadmap" data-reveal="stagger">
-
-					<!-- Start -->
-					<div class="roadmap-start">
-						<span class="roadmap-start_label">
-							<span class="roadmap-start_dot"></span>
-							Internship Begins
-						</span>
-					</div>
-
-					<!-- Task 1 -->
-					<div class="roadmap-step" data-difficulty="beginner">
-						<div class="roadmap-step_spacer"></div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">01</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 1</span>
-										<span class="roadmap-card_badge diff-beginner">
-											<span class="roadmap-card_badge-dot"></span>
-											Beginner
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the TechBridge Homepage</h3>
-									<p class="roadmap-card_desc">
-										Create the first version of the TechBridge website using HTML and
-										CSS. You'll apply foundational web skills to build a clean,
-										responsive homepage from scratch.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Task 2 -->
-					<div class="roadmap-step" data-difficulty="beginner">
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 4</span>
-										<span class="roadmap-card_badge diff-beginner">
-											<span class="roadmap-card_badge-dot"></span>
-											Beginner
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the TechBridge Programs Experience</h3>
-									<p class="roadmap-card_desc">
-										Create a Programs experience that presents TechBridge's available
-										learning programs. Build an interface that showcases each path
-										clearly and helps users understand their options.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">02</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_spacer"></div>
-					</div>
-
-					<!-- Task 3 -->
-					<div class="roadmap-step" data-difficulty="beginner-intermediate">
-						<div class="roadmap-step_spacer"></div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">03</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 8</span>
-										<span class="roadmap-card_badge diff-beginner-int">
-											<span class="roadmap-card_badge-dot"></span>
-											Beginner–Intermediate
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the Internship Tasks Experience</h3>
-									<p class="roadmap-card_desc">
-										Create an interface that presents the TechBridge internship tasks
-										and helps users understand the internship journey.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Task 4 -->
-					<div class="roadmap-step" data-difficulty="intermediate">
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 11</span>
-										<span class="roadmap-card_badge diff-intermediate">
-											<span class="roadmap-card_badge-dot"></span>
-											Intermediate
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build an Interactive Task Tracker</h3>
-									<p class="roadmap-card_desc">
-										Use JavaScript to make the internship task experience interactive
-										and allow progress to be tracked.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">04</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_spacer"></div>
-					</div>
-
-					<!-- Task 5 -->
-					<div class="roadmap-step" data-difficulty="intermediate">
-						<div class="roadmap-step_spacer"></div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">05</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 15</span>
-										<span class="roadmap-card_badge diff-intermediate">
-											<span class="roadmap-card_badge-dot"></span>
-											Intermediate
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the Intern Registration Experience</h3>
-									<p class="roadmap-card_desc">
-										Create a professional registration/onboarding interface for
-										TechBridge interns. Build a smooth onboarding flow that collects
-										the necessary information.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Task 6 -->
-					<div class="roadmap-step" data-difficulty="intermediate-advanced">
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 19</span>
-										<span class="roadmap-card_badge diff-intermediate-adv">
-											<span class="roadmap-card_badge-dot"></span>
-											Intermediate–Advanced
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the Task Submission System</h3>
-									<p class="roadmap-card_desc">
-										Create an interface through which interns can prepare and submit
-										their task work.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">06</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_spacer"></div>
-					</div>
-
-					<!-- Task 7 -->
-					<div class="roadmap-step" data-difficulty="advanced">
-						<div class="roadmap-step_spacer"></div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">07</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 22</span>
-										<span class="roadmap-card_badge diff-advanced">
-											<span class="roadmap-card_badge-dot"></span>
-											Advanced
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the Intern Dashboard</h3>
-									<p class="roadmap-card_desc">
-										Create a dashboard where an intern can view their profile, progress,
-										tasks, and submissions.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Task 8 — Capstone -->
-					<div class="roadmap-step roadmap-step--capstone" data-difficulty="advanced">
-						<div class="roadmap-step_content">
-							<div class="roadmap-card">
-								<div class="roadmap-card_inner">
-									<div class="roadmap-card_header">
-										<span class="roadmap-card_day">Day 26</span>
-										<span class="roadmap-card_badge diff-advanced">
-											<span class="roadmap-card_badge-dot"></span>
-											Advanced
-										</span>
-									</div>
-									<h3 class="roadmap-card_title">Build the Complete TechBridge Internship Platform</h3>
-									<p class="roadmap-card_desc">
-										Combine the different components created during the internship into
-										a complete TechBridge platform. This capstone task brings together
-										everything you've built into one cohesive experience.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="roadmap-step_node">
-							<div class="roadmap-step_arm"></div>
-							<div class="roadmap-step_dot">08</div>
-							<div class="roadmap-step_arm"></div>
-						</div>
-						<div class="roadmap-step_spacer"></div>
-					</div>
-
-					<!-- End -->
-					<div class="roadmap-end">
-						<span class="roadmap-end_label">
-							<span class="roadmap-end_dot"></span>
-							Platform Complete
-						</span>
-					</div>
-
+				<div class="currently-viewing track-dev">
+					<span class="currently-viewing_label">Currently Viewing</span>
+					<span class="currently-viewing_name">WEB DEVELOPMENT</span>
 				</div>
+				<div class="roadmap"></div>
 			</div>
 		</section>
 
@@ -373,9 +209,7 @@
 			<div class="container tasks-apply_inner">
 				<div data-reveal>
 					<p class="section_eyebrow">Apply Now</p>
-					<h2 class="section_title">
-						Ready to Build Real Skills?
-					</h2>
+					<h2 class="section_title">Ready to Build Real Skills?</h2>
 					<p class="tasks-apply_text">
 						Apply for the TechBridge internship and start working through these
 						practical projects. Gain hands-on experience that prepares you for
@@ -384,17 +218,42 @@
 					<a href="index.html#internship" class="btn btn-outline">
 						Learn About the Internship
 						<span class="btn_icon">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+							<svg
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M7 17L17 7" />
+								<path d="M7 7h10v10" />
+							</svg>
 						</span>
 					</a>
 				</div>
 				<div data-reveal>
 					<div class="doppel-card">
-						<div class="doppel-card_inner" style="text-align: center; padding: 3rem 2rem;">
-							<h3 class="section_title" style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.75rem;">
+						<div
+							class="doppel-card_inner"
+							style="text-align: center; padding: 3rem 2rem"
+						>
+							<h3
+								class="section_title"
+								style="
+									font-size: clamp(1.5rem, 3vw, 2rem);
+									margin-bottom: 0.75rem;
+								"
+							>
 								Join the TechBridge Internship
 							</h3>
-							<p style="color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.65;">
+							<p
+								style="
+									color: var(--color-text-muted);
+									margin-bottom: 1.75rem;
+									line-height: 1.65;
+								"
+							>
 								Complete your application in a few minutes. We review every
 								submission and will reach out to you shortly.
 							</p>
@@ -406,7 +265,17 @@
 							>
 								Apply Now
 								<span class="btn_icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path d="M7 17L17 7" />
+										<path d="M7 7h10v10" />
+									</svg>
 								</span>
 							</a>
 						</div>
@@ -430,8 +299,12 @@
 				</div>
 				<div>
 					<h4 class="footer_heading">Programs</h4>
-					<a href="programs.html#data-analytics" class="footer_link">Data Analytics</a>
-					<a href="programs.html#web-development" class="footer_link">Web Development</a>
+					<a href="programs.html#data-analytics" class="footer_link"
+						>Data Analytics</a
+					>
+					<a href="programs.html#web-development" class="footer_link"
+						>Web Development</a
+					>
 					<a href="index.html#internship" class="footer_link">Internship</a>
 				</div>
 				<div>
@@ -481,7 +354,9 @@
 			});
 
 			// Scroll reveal
-			const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+			const prefersReducedMotion = window.matchMedia(
+				"(prefers-reduced-motion: reduce)",
+			).matches;
 			if (!prefersReducedMotion) {
 				const observer = new IntersectionObserver(
 					(entries) => {
@@ -492,12 +367,18 @@
 							}
 						});
 					},
-					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
 				);
-				document.querySelectorAll("[data-reveal]").forEach((el) => observer.observe(el));
+				document
+					.querySelectorAll("[data-reveal]")
+					.forEach((el) => observer.observe(el));
+				window.revealObserver = observer;
 			} else {
-				document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("revealed"));
+				document
+					.querySelectorAll("[data-reveal]")
+					.forEach((el) => el.classList.add("revealed"));
 			}
 		</script>
+		<script src="tasks.js"></script>
 	</body>
 </html>

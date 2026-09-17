@@ -134,39 +134,39 @@ const challenges = [
   },
   {
     id: 8,
-    name: "Authentication & Dashboard App",
+    name: "Advanced Data Visualization Dashboard",
     track: "web-development",
     trackLabel: "Web Development",
     difficulty: "Advanced",
     description:
-      "Create a simple web application with user login, session handling, and a protected dashboard area. Users should be able to register, log in, and access a personalized dashboard.",
+      "Build an interactive dashboard with multiple chart types — bar, line, pie, and scatter plots — featuring animated transitions, dynamic filters, and hover tooltips using a JavaScript charting library.",
     outcome:
-      "A working app with registration, login, session persistence, a protected dashboard route, and logout functionality.",
+      "A responsive dashboard with at least four chart types, interactive filters, smooth animations, and data-driven insights displayed visually.",
     objective:
-      "Gain experience with full-stack concepts including form handling, client-side authentication flow, protected routes, and basic session management.",
-    skills: ["HTML forms", "JavaScript fetch/API calls", "Session & cookie basics", "Client-side routing", "Basic security practices"],
-    tools: ["VS Code", "Node.js and Express (or similar backend)", "MongoDB or JSON file for data storage", "Postman for API testing"],
+      "Master frontend data visualization by binding data to visual elements, creating responsive chart layouts, and building interactive controls that update charts in real time.",
+    skills: ["D3.js or Chart.js", "SVG or Canvas basics", "Data binding", "Responsive chart layout", "Animation & transitions"],
+    tools: ["VS Code", "D3.js or Chart.js", "Sample JSON dataset", "Web browser"],
     time: "4 - 5 days",
     result:
-      "A functional authentication app with register, login, dashboard, and logout flows — demonstrating understanding of full-stack user management."
+      "A polished data visualization dashboard with multiple interactive charts, smooth animations, dynamic filtering, and a responsive layout that works across screen sizes."
   },
   {
     id: 9,
-    name: "Real-Time Collaborative Whiteboard",
+    name: "Progressive Web App",
     track: "web-development",
     trackLabel: "Web Development",
     difficulty: "Advanced",
     description:
-      "Build a browser-based drawing whiteboard where multiple users can draw simultaneously. Changes appear in real time for all connected participants.",
+      "Build a task manager or notes app that works offline, supports installation to the home screen, and uses service workers for caching with local storage for data persistence.",
     outcome:
-      "A multi-user whiteboard with freehand drawing, color selection, undo functionality, and real-time synchronization between users.",
+      "A fully functional PWA that loads offline, stores data in the browser, and can be installed on a phone or desktop without an app store.",
     objective:
-      "Explore real-time communication technologies, canvas drawing APIs, and collaborative state management by building a feature-rich interactive tool.",
-    skills: ["HTML5 Canvas API", "WebSocket basics", "Real-time data synchronization", "JavaScript event handling", "UI/UX for interactive tools"],
-    tools: ["VS Code", "Node.js with Socket.io (or similar)", "Web browser", "Optional: simple Express server"],
-    time: "5 days",
+      "Learn modern web platform capabilities by implementing service workers, web app manifests, and client-side data storage to create an app-like experience entirely in the browser.",
+    skills: ["Service workers", "Web App Manifest", "LocalStorage / IndexedDB", "JavaScript", "Responsive design"],
+    tools: ["VS Code", "Web browser", "Lighthouse for PWA auditing"],
+    time: "4 - 5 days",
     result:
-      "A working collaborative whiteboard with live drawing, color picker, clear canvas, and real-time multi-user synchronization."
+      "A working progressive web app with offline support, home screen installation, data persistence, and a polished responsive interface."
   },
   {
     id: 10,

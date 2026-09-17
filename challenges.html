@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Challenge Hub - TechBridge</title>
+		<meta
+			name="description"
+			content="Explore practical challenges designed to help TechBridge interns apply their skills in Data Analytics and Web Development."
+		/>
+		<link rel="icon" href="assets/techbridge-logo.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="challenges.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav" role="navigation" aria-label="Main navigation">
+			<div class="nav_inner">
+				<a href="index.html" class="nav_logo" aria-label="TechBridge Home">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="nav_logo-img"
+					/>
+				</a>
+				<div class="nav_links">
+					<a href="index.html" class="nav_link" role="menuitem">Home</a>
+					<a href="programs.html" class="nav_link" role="menuitem">Programs</a>
+					<a href="tasks.html" class="nav_link" role="menuitem">Internship Tasks</a>
+					<a href="challenges.html" class="nav_link nav_link-active" role="menuitem">Challenge Hub</a>
+					<a href="index.html#community" class="nav_link" role="menuitem">Community</a>
+					<a href="#footer" class="nav_link" role="menuitem">Contact</a>
+					<a
+						href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+						class="nav_cta btn btn-primary btn-sm"
+						role="menuitem"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Apply Now
+						<span class="btn_icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+						</span>
+					</a>
+				</div>
+				<button
+					class="nav_toggle"
+					aria-label="Toggle navigation menu"
+					aria-expanded="false"
+					aria-controls="nav_links"
+				>
+					<span></span><span></span><span></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section class="challenges-hero">
+			<div class="hero-orbs">
+				<div class="hero-orb hero-orb-1"></div>
+				<div class="hero-orb hero-orb-2"></div>
+				<div class="hero-orb hero-orb-3"></div>
+			</div>
+			<div class="challenges-hero_inner">
+				<div data-reveal>
+					<p class="section_eyebrow">Challenge Hub</p>
+					<h1 class="section_title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+						TechBridge Challenge Hub
+					</h1>
+					<p class="section_subtitle" style="margin-inline: auto;">
+						Explore practical challenges designed to help TechBridge interns
+						apply their skills and gain real-world experience. Filter by track
+						or difficulty to find the right challenge for you.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Filters + Grid -->
+		<section class="section section-alt">
+			<div class="container">
+				<!-- Track Filter -->
+				<div class="filter-bar" data-reveal>
+					<p class="filter-label">Track</p>
+					<div class="filter-buttons">
+						<button class="filter-btn filter-track-btn active" data-track="all">All</button>
+						<button class="filter-btn filter-track-btn" data-track="data-analytics">
+							<img src="assets/icons/data-analytics.svg" alt="" aria-hidden="true" class="filter-btn_icon" />
+							Data Analytics
+						</button>
+						<button class="filter-btn filter-track-btn" data-track="web-development">
+							<img src="assets/icons/web-development.svg" alt="" aria-hidden="true" class="filter-btn_icon" />
+							Web Development
+						</button>
+					</div>
+				</div>
+
+				<!-- Difficulty Filter -->
+				<div class="filter-bar" data-reveal>
+					<p class="filter-label">Difficulty</p>
+					<div class="filter-buttons">
+						<button class="filter-btn filter-diff-btn active" data-difficulty="all">All</button>
+						<button class="filter-btn filter-diff-btn" data-difficulty="beginner">Beginner</button>
+						<button class="filter-btn filter-diff-btn" data-difficulty="intermediate">Intermediate</button>
+						<button class="filter-btn filter-diff-btn" data-difficulty="advanced">Advanced</button>
+					</div>
+				</div>
+
+				<!-- Challenge Grid -->
+				<div class="challenge-grid" id="challenge-grid"></div>
+
+				<!-- No Results -->
+				<div class="no-results" id="no-results" style="display: none;">
+					<p class="no-results_text">No challenges match your filters.</p>
+					<p class="no-results_sub">Try adjusting the track or difficulty selection.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Apply CTA -->
+		<section class="section section-dark" id="challenges-contact">
+			<div class="container">
+				<div class="challenges-cta" data-reveal>
+					<div>
+						<p class="section_eyebrow">Ready to Begin?</p>
+						<h2 class="section_title">Start Building Real Skills Today</h2>
+						<p class="challenges-cta_text">
+							Apply for the TechBridge internship and start working through
+							these practical challenges. Gain hands-on experience that
+							prepares you for real opportunities.
+						</p>
+						<a href="index.html#internship" class="btn btn-outline">
+							Learn About the Internship
+							<span class="btn_icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+							</span>
+						</a>
+					</div>
+					<div>
+						<div class="doppel-card">
+							<div class="doppel-card_inner" style="text-align: center; padding: 3rem 2rem;">
+								<h3 class="section_title" style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.75rem;">
+									Join the TechBridge Internship
+								</h3>
+								<p style="color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.65;">
+									Complete your application in a few minutes. We review every
+									submission and will reach out to you shortly.
+								</p>
+								<a
+									href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+									class="btn btn-primary btn-lg"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Apply Now
+									<span class="btn_icon">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer" id="footer">
+			<div class="container footer_inner">
+				<div class="footer_brand">
+					<img
+						src="assets/techbridge-logo.png"
+						alt="TechBridge logo"
+						class="footer_logo"
+					/>
+					<p class="footer_tagline">
+						Bridging Learning to Real-World Experience
+					</p>
+				</div>
+				<div>
+					<h4 class="footer_heading">Programs</h4>
+					<a href="programs.html#data-analytics" class="footer_link">Data Analytics</a>
+					<a href="programs.html#web-development" class="footer_link">Web Development</a>
+					<a href="index.html#internship" class="footer_link">Internship</a>
+				</div>
+				<div>
+					<h4 class="footer_heading">Connect</h4>
+					<a
+						href="https://chat.whatsapp.com/DFoiANlw4hu0BIyVHku70r"
+						class="footer_link"
+						target="_blank"
+						rel="noopener noreferrer"
+					>WhatsApp Community</a>
+					<a href="mailto:techbridgebaslink@gmail.com" class="footer_link">Email Us</a>
+					<a
+						href="https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com"
+						class="footer_link"
+						target="_blank"
+						rel="noopener noreferrer"
+					>Apply Now</a>
+				</div>
+			</div>
+			<div class="footer_bottom container">
+				<p class="footer_copy">
+					&copy; 2026 TechBridge by Baselink Services Limited
+				</p>
+			</div>
+		</footer>
+
+		<!-- Modal -->
+		<div class="modal-overlay" id="modal-backdrop">
+			<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+				<button class="modal_close" id="modal-close" aria-label="Close modal">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+						<line x1="18" y1="6" x2="6" y2="18"/>
+						<line x1="6" y1="6" x2="18" y2="18"/>
+					</svg>
+				</button>
+				<div class="modal_inner">
+					<div class="modal_header">
+						<div class="modal_badges">
+							<span class="challenge-badge challenge-badge_track" id="modal-track"></span>
+							<span class="challenge-badge challenge-badge_diff" id="modal-diff"></span>
+						</div>
+						<h2 class="modal_title" id="modal-title"></h2>
+					</div>
+					<div class="modal_body">
+						<div class="modal_section">
+							<h3 class="modal_section-title">Objective</h3>
+							<p class="modal_section-text" id="modal-objective"></p>
+						</div>
+						<div class="modal_section">
+							<h3 class="modal_section-title">Skills Required</h3>
+							<ul class="modal_list" id="modal-skills"></ul>
+						</div>
+						<div class="modal_section">
+							<h3 class="modal_section-title">Tools</h3>
+							<ul class="modal_list" id="modal-tools"></ul>
+						</div>
+						<div class="modal_section">
+							<h3 class="modal_section-title">Estimated Time</h3>
+							<p class="modal_section-text modal_time" id="modal-time"></p>
+						</div>
+						<div class="modal_section">
+							<h3 class="modal_section-title">Expected Result</h3>
+							<p class="modal_section-text" id="modal-result"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Mobile navigation toggle
+			const toggle = document.querySelector(".nav_toggle");
+			const navLinks = document.querySelector(".nav_links");
+
+			toggle.addEventListener("click", () => {
+				const expanded = toggle.getAttribute("aria-expanded") === "true";
+				toggle.setAttribute("aria-expanded", !expanded);
+				navLinks.classList.toggle("nav_links-open");
+			});
+
+			document.querySelectorAll(".nav_link, .nav_cta").forEach((link) => {
+				link.addEventListener("click", () => {
+					toggle.setAttribute("aria-expanded", "false");
+					navLinks.classList.remove("nav_links-open");
+				});
+			});
+
+			// Scroll reveal
+			const prefersReducedMotion = window.matchMedia(
+				"(prefers-reduced-motion: reduce)",
+			).matches;
+			if (!prefersReducedMotion) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+								observer.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
+				);
+				document
+					.querySelectorAll("[data-reveal]")
+					.forEach((el) => observer.observe(el));
+			} else {
+				document
+					.querySelectorAll("[data-reveal]")
+					.forEach((el) => el.classList.add("revealed"));
+			}
+		</script>
+		<script src="challenges.js"></script>
+	</body>
+</html>

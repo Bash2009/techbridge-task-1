@@ -1,91 +1,11 @@
 /* ========================================
    TechBridge - Intern Dashboard
    Interactive Task Tracker + Tech Explorer
+   Tasks are loaded from the backend REST API
    ======================================== */
 
-/* ── Task Data ── */
-const tasks = [
-  {
-    id: 1,
-    number: 1,
-    title: "Build the TechBridge Homepage",
-    day: "Day 1",
-    difficulty: "Beginner",
-    description:
-      "Create the first version of the TechBridge website using HTML and CSS.",
-    status: "completed",
-  },
-  {
-    id: 2,
-    number: 2,
-    title: "Build the TechBridge Programs Experience",
-    day: "Day 4",
-    difficulty: "Beginner",
-    description:
-      "Create a Programs experience presenting TechBridge's available learning programs.",
-    status: "completed",
-  },
-  {
-    id: 3,
-    number: 3,
-    title: "Build the Internship Tasks Experience",
-    day: "Day 8",
-    difficulty: "Beginner \u2192 Intermediate",
-    description:
-      "Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.",
-    status: "completed",
-  },
-  {
-    id: 4,
-    number: 4,
-    title: "Build an Interactive Internship Roadmap",
-    day: "Day 11",
-    difficulty: "Beginner \u2192 Intermediate",
-    description:
-      "Use JavaScript to allow visitors to switch between the Data Analytics and Web Development internship tracks.",
-    status: "completed",
-  },
-  {
-    id: 5,
-    number: 5,
-    title: "Build the Intern Registration Experience",
-    day: "Day 15",
-    difficulty: "Intermediate",
-    description:
-      "Create a professional registration and onboarding interface for TechBridge interns.",
-    status: "completed",
-  },
-  {
-    id: 6,
-    number: 6,
-    title: "Build the Task Submission System",
-    day: "Day 19",
-    difficulty: "Intermediate",
-    description:
-      "Create an interface through which interns can prepare and submit their task work.",
-    status: "in-progress",
-  },
-  {
-    id: 7,
-    number: 7,
-    title: "Build the Intern Dashboard",
-    day: "Day 22",
-    difficulty: "Intermediate",
-    description:
-      "Create a dashboard where an intern can view their profile, progress, tasks and submissions.",
-    status: "not-started",
-  },
-  {
-    id: 8,
-    number: 8,
-    title: "Build the Complete TechBridge Platform",
-    day: "Day 26",
-    difficulty: "Intermediate",
-    description:
-      "Combine the different components created during the internship into a complete TechBridge platform.",
-    status: "not-started",
-  },
-];
+/* ── API Config ── */
+const API_BASE = "http://localhost:3000/api";
 
 /* ── Technology Data ── */
 const technologies = {
@@ -112,12 +32,12 @@ const technologies = {
   "vue.js": {
     name: "Vue.js",
     description:
-      "Vue.js is a progressive JavaScript framework designed for building user interfaces. Unlike other monolithic frameworks, Vue is designed to be incrementally adoptable, making it easy to integrate with other libraries or existing projects.",
+      "Vue.js is a progressive JavaScript framework designed for building user interfaces. Unlike other monolithic frameworks, Vue is designed to be incrementally adoptable, making it easy to integrate with libraries and existing projects.",
     features: [
       "Reactive data binding that automatically updates the UI when data changes",
       "Component-based architecture for building reusable UI elements",
       "Simple and intuitive template syntax that extends HTML",
-      "Virtual DOM for efficient rendering and updates",
+      "Virtual DOM that efficiently updates and renders collections",
       "Composition API for better code organization in complex components",
       "Lightweight with a small bundle size and fast runtime",
     ],
@@ -129,16 +49,16 @@ const technologies = {
     ],
     url: "https://vuejs.org",
   },
-  "angular": {
+  angular: {
     name: "Angular",
     description:
-      "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Maintained by Google, it provides a comprehensive solution for building complex, enterprise-scale web applications.",
+      "Angular is a platform and framework for building single-page client applications with HTML and TypeScript. Maintained by Google, it provides a complete solution for application development with built-in tools for routing, forms, HTTP communication, and testing.",
     features: [
       "Two-way data binding that keeps the model and view in sync",
       "Dependency injection for modular and testable code architecture",
-      "TypeScript-first development for strong typing and better tooling",
-      "Built-in routing, forms handling, and HTTP client",
-      "RxJS integration for handling asynchronous data streams",
+      "TypeScript-first approach for strong typing and better tooling",
+      "Integrated routing, forms handling, and HTTP client",
+      "RxJS for handling asynchronous data streams",
       "Angular CLI for scaffolding, building, and deploying projects",
     ],
     useCases: [
@@ -176,11 +96,11 @@ const technologies = {
       },
       {
         name: "Flask",
-        desc: "Lightweight Python micro-framework for building small to medium web applications and APIs.",
+        desc: "Lightweight Python micro web framework for building web applications and APIs.",
       },
       {
         name: "Laravel",
-        desc: "PHP framework with elegant syntax for building web applications with robust features.",
+        desc: "PHP framework with elegant syntax for building web applications.",
       },
       {
         name: ".NET",
@@ -191,6 +111,7 @@ const technologies = {
 };
 
 /* ── State ── */
+let tasks = [];
 let activeFilter = "all";
 let activeTech = "next.js";
 
@@ -204,35 +125,25 @@ const modalBackdrop = document.getElementById("task-modal-backdrop");
 const modalClose = document.getElementById("task-modal-close");
 const celebrationOverlay = document.getElementById("celebration-overlay");
 const celebrationClose = document.getElementById("celebration-close");
+const loadingState = document.getElementById("tasks-loading");
+const errorState = document.getElementById("tasks-error");
+const retryButton = document.getElementById("tasks-retry");
+const backendStatus = document.getElementById("backend-status");
 
-/* ── localStorage ── */
-const STORAGE_KEY = "techbridge-task-progress";
-
-function saveProgress() {
-  const data = tasks.map(function (t) {
-    return { id: t.id, status: t.status };
-  });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-}
-
-function loadProgress() {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return;
-  try {
-    const data = JSON.parse(raw);
-    data.forEach(function (item) {
-      const task = tasks.find(function (t) {
-        return t.id === item.id;
-      });
-      if (task) task.status = item.status;
-    });
-  } catch (e) {
-    // ignore
-  }
+/* ── Backend Status Indicator ── */
+function setBackendStatus(connected) {
+  if (!backendStatus) return;
+  backendStatus.textContent = connected
+    ? "Backend Status: Connected"
+    : "Backend Status: Offline";
+  backendStatus.classList.toggle("is-connected", connected);
+  backendStatus.classList.toggle("is-offline", !connected);
 }
 
 /* ── Progress Updates ── */
 function updateProgress() {
+  if (tasks.length === 0) return;
+
   var completedCount = 0;
   tasks.forEach(function (t) {
     if (t.status === "completed") completedCount++;
@@ -240,6 +151,7 @@ function updateProgress() {
   var remaining = tasks.length - completedCount;
   var percent = Math.round((completedCount / tasks.length) * 100);
 
+  document.getElementById("stat-total").textContent = tasks.length;
   document.getElementById("stat-completed").textContent = completedCount;
   document.getElementById("stat-remaining").textContent = remaining;
   document.getElementById("stat-percent").textContent = percent + "%";
@@ -249,6 +161,48 @@ function updateProgress() {
   document.getElementById("progress-remaining-text").textContent =
     remaining + " Task" + (remaining !== 1 ? "s" : "") + " Remaining";
   document.getElementById("progress-fill").style.width = percent + "%";
+}
+
+/* ── UI States ── */
+function showLoading() {
+  loadingState.style.display = "block";
+  errorState.style.display = "none";
+  noResults.style.display = "none";
+  taskGrid.innerHTML = "";
+}
+
+function showError() {
+  loadingState.style.display = "none";
+  errorState.style.display = "block";
+  noResults.style.display = "none";
+  taskGrid.innerHTML = "";
+  setBackendStatus(false);
+}
+
+function hideStates() {
+  loadingState.style.display = "none";
+  errorState.style.display = "none";
+}
+
+/* ── Load Tasks From API ── */
+async function loadTasks() {
+  showLoading();
+
+  try {
+    var response = await fetch(API_BASE + "/tasks");
+    if (!response.ok) {
+      throw new Error("API returned " + response.status);
+    }
+
+    tasks = await response.json();
+    setBackendStatus(true);
+    hideStates();
+    updateProgress();
+    renderTasks();
+  } catch (err) {
+    tasks = [];
+    showError();
+  }
 }
 
 /* ── Task Rendering ── */
@@ -281,7 +235,8 @@ function renderTasks() {
 
     var numStr = task.number < 10 ? "0" + task.number : String(task.number);
 
-    var completeBtnClass = "btn btn-sm btn-outline task-card_btn task-card_btn--complete";
+    var completeBtnClass =
+      "btn btn-sm btn-outline task-card_btn task-card_btn--complete";
     var completeBtnText = "Mark as Completed";
     if (task.status === "completed") {
       completeBtnClass += " is-completed";
@@ -311,7 +266,6 @@ function renderTasks() {
     taskGrid.appendChild(card);
   });
 
-  // Attach event listeners
   taskGrid.querySelectorAll(".task-card_btn--complete").forEach(function (btn) {
     btn.addEventListener("click", function () {
       markCompleted(Number(btn.dataset.id));
@@ -325,24 +279,39 @@ function renderTasks() {
   });
 }
 
-/* ── Mark Completed ── */
-function markCompleted(id) {
+/* ── Mark Completed (PUT to API) ── */
+async function markCompleted(id) {
   var task = tasks.find(function (t) {
     return t.id === id;
   });
   if (!task || task.status === "completed") return;
 
-  task.status = "completed";
-  saveProgress();
-  updateProgress();
-  renderTasks();
+  try {
+    var response = await fetch(API_BASE + "/tasks/" + id, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: "completed" }),
+    });
 
-  // Check if all completed
-  var allDone = tasks.every(function (t) {
-    return t.status === "completed";
-  });
-  if (allDone) {
-    showCelebration();
+    if (!response.ok) {
+      throw new Error("API returned " + response.status);
+    }
+
+    var updated = await response.json();
+    task.status = updated.status;
+    setBackendStatus(true);
+    updateProgress();
+    renderTasks();
+
+    var allDone = tasks.every(function (t) {
+      return t.status === "completed";
+    });
+    if (allDone) {
+      showCelebration();
+    }
+  } catch (err) {
+    setBackendStatus(false);
+    alert("Unable to update task. Please check your connection and try again.");
   }
 }
 
@@ -362,32 +331,52 @@ celebrationOverlay.addEventListener("click", function (e) {
   if (e.target === celebrationOverlay) hideCelebration();
 });
 
-/* ── Task Modal ── */
-function openTaskModal(id) {
-  var task = tasks.find(function (t) {
-    return t.id === id;
-  });
-  if (!task) return;
-
-  var statusLabel =
-    task.status === "completed"
-      ? "Completed"
-      : task.status === "in-progress"
-        ? "In Progress"
-        : "Not Started";
-
-  var numStr = task.number < 10 ? "0" + task.number : String(task.number);
-
-  document.getElementById("task-modal-num").textContent = "Task " + numStr;
-  document.getElementById("task-modal-status").textContent = statusLabel;
-  document.getElementById("task-modal-title").textContent = task.title;
-  document.getElementById("task-modal-desc").textContent = task.description;
-  document.getElementById("task-modal-day").textContent = task.day;
-  document.getElementById("task-modal-diff").textContent = task.difficulty;
+/* ── Task Modal (GET single task from API) ── */
+async function openTaskModal(id) {
+  document.getElementById("task-modal-num").textContent = "Loading...";
+  document.getElementById("task-modal-status").textContent = "";
+  document.getElementById("task-modal-title").textContent = "";
+  document.getElementById("task-modal-desc").textContent = "Loading task details...";
+  document.getElementById("task-modal-day").textContent = "";
+  document.getElementById("task-modal-diff").textContent = "";
 
   modalBackdrop.classList.add("open");
   document.body.style.overflow = "hidden";
   modalClose.focus();
+
+  try {
+    var response = await fetch(API_BASE + "/tasks/" + id);
+    if (!response.ok) {
+      throw new Error("API returned " + response.status);
+    }
+
+    var task = await response.json();
+    setBackendStatus(true);
+
+    var statusLabel =
+      task.status === "completed"
+        ? "Completed"
+        : task.status === "in-progress"
+          ? "In Progress"
+          : "Not Started";
+
+    var numStr = task.number < 10 ? "0" + task.number : String(task.number);
+
+    document.getElementById("task-modal-num").textContent = "Task " + numStr;
+    document.getElementById("task-modal-status").textContent = statusLabel;
+    document.getElementById("task-modal-title").textContent = task.title;
+    document.getElementById("task-modal-desc").textContent = task.description;
+    document.getElementById("task-modal-day").textContent = task.day;
+    document.getElementById("task-modal-diff").textContent = task.difficulty;
+  } catch (err) {
+    setBackendStatus(false);
+    document.getElementById("task-modal-num").textContent = "Error";
+    document.getElementById("task-modal-title").textContent = "Unable to load task";
+    document.getElementById("task-modal-desc").textContent =
+      "Please check your connection or try again.";
+    document.getElementById("task-modal-day").textContent = "-";
+    document.getElementById("task-modal-diff").textContent = "-";
+  }
 }
 
 function closeTaskModal() {
@@ -417,6 +406,9 @@ filterButtons.forEach(function (btn) {
     renderTasks();
   });
 });
+
+/* ── Retry Button ── */
+retryButton.addEventListener("click", loadTasks);
 
 /* ── Technology Explorer ── */
 function renderTechContent(key) {
@@ -480,7 +472,5 @@ techTabs.forEach(function (tab) {
 });
 
 /* ── Initialize ── */
-loadProgress();
-updateProgress();
-renderTasks();
 renderTechContent(activeTech);
+loadTasks();

@@ -141,6 +141,11 @@
 					</p>
 				</div>
 
+				<!-- Backend Status -->
+				<div class="backend-status-wrapper" data-reveal>
+					<span class="backend-status" id="backend-status">Backend Status: Connecting...</span>
+				</div>
+
 				<!-- Filters -->
 				<div class="filter-bar" data-reveal>
 					<p class="filter-label">Filter Tasks</p>
@@ -150,6 +155,19 @@
 						<button class="filter-btn" data-filter="in-progress">In Progress</button>
 						<button class="filter-btn" data-filter="not-started">Not Started</button>
 					</div>
+				</div>
+
+				<!-- Loading State -->
+				<div class="tasks-loading" id="tasks-loading" style="display: none;">
+					<div class="tasks-loading_spinner" aria-hidden="true"></div>
+					<p class="tasks-loading_text">Loading tasks...</p>
+				</div>
+
+				<!-- Error State -->
+				<div class="tasks-error" id="tasks-error" style="display: none;">
+					<p class="tasks-error_title">Unable to load tasks.</p>
+					<p class="tasks-error_sub">Please check your connection or try again.</p>
+					<button class="btn btn-primary btn-sm" id="tasks-retry">Retry</button>
 				</div>
 
 				<!-- Task Grid -->
